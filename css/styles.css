@@ -43,7 +43,7 @@ img{
 
 .contenedor{
     max-width: 120rem;
-    margin: 0 auto;
+    margin: 0 auto; /* Para centrar el contenedor en la pantalla */
 }
 
 h1, h2, h3{
@@ -127,6 +127,33 @@ h3{ font-size: 2.4rem;}
     margin: 1rem 0;
     text-align: center;
     line-height: 1.2;
+}
+
+/** Graficos **/
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat; /*Deja de repeteir la imagen agregada por css*/
+    background-size: cover; /*Hace que la imagen agregada con CSS se estire y ocupe el espacio que puede*/
+    grid-column: 1 / 3;
+}
+
+.grafico--camisas{
+    /*Con grid-row y grid-column puedes mover un elemento a algun lugar especifico de la cuadricula*/
+    grid-row: 2 / 3;
+    background-image: url(../img/grafico1.jpg);
+}
+
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+}
+
+@media (min-width: 768px) {
+
+    .grafico--node{
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
 }
 
 /** Footer **/
